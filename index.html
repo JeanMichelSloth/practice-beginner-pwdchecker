@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JMS-PASSWORD-CHECKER</title>
+</head>
+<body>
+    <h1>JMS Password Checker</h1>
+    <div class="form">
+        <label for="password">Password to check :</label>
+        <input type="text" name="password" id="password">
+        <button onClick="checkPassword()">Check</button>
+    </div>
+    <div class="rules">
+        <h2>Rules to check :</h2>
+        <div class="rule">
+            <input type="checkbox" name="length-rule" id="length-rule" checked>
+            <label for="length-rule">Has at least 9 characters</label>
+            <img src="./assets/checked.png" id="length-rule-ok">
+            <img src="./assets/cancel.png" id="length-rule-ko">
+        </div>
+        
+        <div class="rule">
+            <input type="checkbox" name="special-rule" id="special-rule" checked>
+            <label for="special-rule">Has at least 1 special character</label>
+            <img src="./assets/checked.png" id="special-rule-ok">
+            <img src="./assets/cancel.png" id="special-rule-ko">
+        </div>
+        <div class="rule">
+            <input type="checkbox" name="capital-rule" id="capital-rule" checked>
+            <label for="capital-rule">
+                Has at least 1 capital character
+            </label>
+            <img src="./assets/checked.png" id="capital-rule-ok">
+            <img src="./assets/cancel.png" id="capital-rule-ko">
+        </div>
+        <div class="rule">
+            <input type="checkbox" name="number-rule" id="number-rule" checked>
+            <label for="number-rule">
+                Has at least 1 number
+            </label>
+            <img src="./assets/checked.png" id="number-rule-ok">
+            <img src="./assets/cancel.png" id="number-rule-ko">
+        </div>
+        <div class="rule">
+            <input type="checkbox" name="unichar-rule" id="unichar-rule" checked>
+            <label for="unichar-rule">
+                Is not a combo of one character
+            </label>
+            <img src="./assets/checked.png" id="unichar-rule-ok">
+            <img src="./assets/cancel.png" id="unichar-rule-ko">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
